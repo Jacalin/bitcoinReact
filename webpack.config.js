@@ -11,6 +11,11 @@ var config = {
     filename: "bundle.js",
     publicPath: "/app/"
   },
+  devServer: {
+    contentBase: path.join(__dirname, "dist"),
+    compress: true,
+    port: 9000
+  },
   module:{
     loaders:[
       {
@@ -21,7 +26,6 @@ var config = {
           presets:["react", "es2015", "stage-2"]
         }
       }
-
     ]
   }
 
